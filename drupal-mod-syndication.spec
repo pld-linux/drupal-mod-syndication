@@ -2,7 +2,7 @@
 Summary:	Drupal Syndication Module
 Name:		drupal-mod-%{modname}
 Version:	4.6.0
-Release:	0.3
+Release:	0.4
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://drupal.org/files/projects/%{modname}-%{version}.tar.gz
@@ -12,8 +12,9 @@ Requires:	drupal >= 4.6.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_moddir		%{_datadir}/drupal/modules
-%define		_podir		%{_moddir}/po/%{modname}
+%define		_drupaldir	%{_datadir}/drupal
+%define		_moddir		%{_drupaldir}/modules
+%define		_podir		%{_drupaldir}/po/%{modname}
 
 %description
 Syndication module offers a web page which centralizes all of the RSS
