@@ -3,13 +3,13 @@ Summary:	Drupal Syndication Module
 Summary(pl):	Modu³ Syndication dla Drupala
 Name:		drupal-mod-%{modname}
 Version:	4.6.0
-Release:	0.4
+Release:	0.5
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://drupal.org/files/projects/%{modname}-%{version}.tar.gz
-# Source0-md5:	d9ddecb6fb20f443ff7e2970f1f85906
-URL:		http://drupal.org/project/syndication
-Requires:	drupal >= 4.6.0
+# Source0-md5:	59dda5bcc7153fab5c38835b646041ff
+Patch0:		http://drupal.org/files/issues/syndication.module.patch
+
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,6 +29,7 @@ interesuj±ce ¼ród³a na stronie WWW.
 
 %prep
 %setup -q -n %{modname}
+%patch0 -p0
 rm -f LICENSE.txt # GPL v2
 
 %install

@@ -1,0 +1,16 @@
+Index: syndication.module
+===================================================================
+RCS file: /cvs/drupal-contrib/contributions/modules/syndication/syndication.module,v
+retrieving revision 1.37
+diff -u -r1.37 syndication.module
+--- syndication.module	14 Dec 2004 02:46:04 -0000	1.37
++++ syndication.module	22 Jan 2005 21:06:16 -0000
+@@ -63,7 +63,7 @@
+       while ($account = db_fetch_object($result)) {
+         $link[] = l(t("%s's RSS feed", array ("%s" => $account->name)), "blog/feed/$account->uid");
+         $link[] = l(t("%s's blog", array ("%s" => $account->name)), "blog/$account->uid");
+-        $link[] = l(t("%s's profile", array ("%s" => $account->name)), "user/view/$account->uid");
++        $link[] = l(t("%s's profile", array ("%s" => $account->name)), "user/$account->uid");
+       }
+       $row[] = "$i. ". theme("links", $link);
+       $i++;
