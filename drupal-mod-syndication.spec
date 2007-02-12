@@ -1,6 +1,6 @@
 %define		modname syndication
 Summary:	Drupal Syndication Module
-Summary(pl.UTF-8):   Moduł Syndication dla Drupala
+Summary(pl.UTF-8):	Moduł Syndication dla Drupala
 Name:		drupal-mod-%{modname}
 Version:	4.6.0
 Release:	0.5
